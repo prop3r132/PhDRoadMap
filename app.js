@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 const app = express();
 const port = 8080;
 
-const apiRouter = require('/home/prop3r/PhD_html/Active/express-app/routes/api');
+const apiRouter = require('/routes/api.js');
 
 app.use(express.static('public'));
 
