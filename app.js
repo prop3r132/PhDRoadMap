@@ -3,7 +3,7 @@ const { exec } = require('child_process');
 const app = express();
 const port = 3000;
 
-const apiRouter = require('/routes/api.js');
+const apiRouter = require(__dirname + '/routes/api.js');
 
 app.use(express.static('public'));
 
