@@ -17,33 +17,33 @@ app.use('/api', apiRouter);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
-    openBrowser(); // Open the browser after starting the server
+    // openBrowser(); // Open the browser after starting the server
 });
 
-function openBrowser() {
-    const url = `http://localhost:${port}`;
+// function openBrowser() {
+//     const url = `http://localhost:${port}`;
   
-    // Cross-platform solution to open the browser
-    const platform = process.platform;
-    let command;
-    switch (platform) {
-      case 'win32':
-        command = `start ${url}`;
-        break;
-      case 'darwin':
-        command = `open ${url}`;
-        break;
-      case 'linux':
-        command = `xdg-open ${url}`;
-        break;
-      default:
-        console.error('Unsupported platform');
-        return;
-    }
+//     // Cross-platform solution to open the browser
+//     const platform = process.platform;
+//     let command;
+//     switch (platform) {
+//       case 'win32':
+//         command = `start ${url}`;
+//         break;
+//       case 'darwin':
+//         command = `open ${url}`;
+//         break;
+//       case 'linux':
+//         command = `xdg-open ${url}`;
+//         break;
+//       default:
+//         console.error('Unsupported platform');
+//         return;
+//     }
   
-    exec(command, (err) => {
-      if (err) {
-        console.error(`Error opening browser: ${err}`);
-      }
-    });
-  }
+  //   exec(command, (err) => {
+  //     if (err) {
+  //       console.error(`Error opening browser: ${err}`);
+  //     }
+  //   });
+  // }
