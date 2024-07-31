@@ -34,7 +34,7 @@ function openBrowser() {
         command = `open ${url}`;
         break;
       case 'linux':
-        command = `firefox ${url}`;
+        command = `xdg-oprn ${url}`;
         break;
       default:
         console.error('Unsupported platform');
