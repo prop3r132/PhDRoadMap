@@ -1,0 +1,8 @@
+#!/bin/env bash
+
+
+# Print message with colors and formatting
+
+printf "\033[1;34mHello There!\033[0m\n"
+printf "\033[1;32mWelcome to this site that I have created in a whim-fueled passion.\033[0m\n"
+printf "\033[1;33mI hope you enjoy, I will update more!\033[0m\n"

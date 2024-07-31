@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    line-height: 1.4;
+    background: #40E0D0;
+    color: red;
+    padding: 20px;
+    font-family: Arial;
+    
+}
+
+header {
+    padding: 20px 0 0;
+    margin-bottom: 20px;
+    margin: 0;   
+}
+
+h1 {
+    background: #FFC300;
+    color: #900c3f;
+    font-size: 42px;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    font-family: Georgia;
+    vertical-align: middle;
+    text-align: center;
+    /* display: inline-block; */
+    padding: 10px 20px;
+}
+
+h2 {
+    /* list-style-image: url('hat.gif'); */
+    background: #FFC300;
+    margin-bottom: 10px;
+    color: #2b7343;
+    font-size: 29px;
+    font-weight: bold;
+    font-family: Copperplate;
+    text-align: center;
+    vertical-align: middle;
+    /* display: inline-block; */
+    padding: 5px 10px;
+}
+
+p {
+    color: #0b1235;
+    font-size: 19.5px;
+    font-style: normal;
+    font-family: Consolas, monospace;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
+
+
+ul {
+    list-style-type: circle;
+    /* list-style-image: url('hat.jpg'); */
+}
+
+ul li {
+    background: #e4e4e4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+ul li strong {
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #f6f7af;
+    font-family: Arial;
+    color: red;
+    border-radius: 5px;
+    
+}
+
+/* footer p {
+    
+} */
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    ul li {
+        padding: 8px;
+    }
+}
+
+.centered {
+  text-align: center;
+}

@@ -1,0 +1,91 @@
+#!/bin/env bash
+
+#for linux uncomment this
+nodeVer="node -v"
+nodePacktMngr="npm -v"
+if [ "$nodeVer" == 0 ]; then
+    sudo apt install nodejs
+else
+    printf "\033[1;30mThe Current Node version: %s\n\n\033[0m" "$($nodeVer)"
+fi
+
+
+if [ "$nodePacktMngr" == 0 ]; then
+    npm install -g npm
+else
+    printf "\033[1;30mThe Current Node Package Manager version: %s\n\n\033[0m" "$($nodePacktMngr)"
+fi
+
+#Initialize the NODE.js
+
+nowTime="date +'%H:%M:%S'"
+pckgJson="date -r package.json"
+
+if [ "$nowTime" = "$pckgJson" ]; then
+    npm init -y
+else
+    printf "\033[1;32mpackage.json has been already created, no need to modify\n\n\033[0m"
+fi
+#Installing express
+expInstall="npm install -g express"
+if [ "$expInstall" == 0 ]; then
+    $expInstall
+else
+    exprsVerShw="npm view express version"
+    printf "\033[1;30mThe Current Express App version: %s\n\n\033[0m" "$($exprsVerShw)"
+fi
+
+
+#install nodemon to initiate the node server
+nodemon_install="npm install -g nodemon"
+if [ "$nodemon_install" == 0 ]; then
+    $nodemon_install
+else
+    nodeMonverShw="nodemon -v"
+    printf "\033[1;30mThe Current Nodemon version: %s\n\n\033[0m" "$($nodeMonverShw)"
+fi
+
+
+
+
+#Define multiple command variables
+# Create an array of the command variables
+# cmds=("$cmd1" "$cmd2" "$cmd3")
+
+# wrk_dir="pwd"
+# printf "\033[1;32mCurrent Directory: %s\n\033[0m" "$($wrk_dir)"
+
+# Define the directory path
+# path="/home/runner/NYCPROJECT/express-app"
+# creat_dir="mkdir -p $path"
+
+
+# Check if the directory existsf
+# if [ -d "$path" ]; then
+#     echo "Directory already exists."
+# else
+#     mkdir -p "$path"
+#     echo "Directory created."
+# fi
+
+# cmdd="cd /home/runner/NYCPROJECT/express-app"
+
+# Check if the cd command was successful
+# if [ $? -ne 0 ]; then
+#     echo "Failed to change directory to $path"
+#     exit 1
+# fi
+
+# If successful, proceed with the rest of the script
+# echo "Successfully changed directory to $path"
+
+# $cmdd
+
+#initialize npm to see/edit package.json
+#All npm activity will be inside express-app directory
+#echo $PATH | cut -d':' -f1-10 | tr ':' '\n'
+# Loop through each command, print it, and execute it
+# for cmd in "${cmds[@]}"; {
+# printf "Executing command: %s\n" "$cmd"
+# $cmd
+# }
