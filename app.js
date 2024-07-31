@@ -9,7 +9,7 @@ app.use(express.static('public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/public/PhDRoadMap.html');
-    res.sendFile(__dirname + '/public/node_mon');
+    // res.sendFile(__dirname + '/public/node_mon');
 });
 
 // Use the API router
