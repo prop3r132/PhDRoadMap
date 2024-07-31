@@ -34,7 +34,7 @@ function openBrowser() {
         command = `open ${url}`;
         break;
       case 'linux':
-        command = `xdg-oprn ${url}`;
+        command = `xdg-open ${url}`;
         break;
       default:
         console.error('Unsupported platform');
