@@ -6,14 +6,14 @@ nodePacktMngr="npm -v"
 if [ "$nodeVer" == 0 ]; then
     sudo apt install nodejs
 else
-    printf "\033[1;30mThe Current Node version: %s\n\n\033[0m" "$($nodeVer)"
+    printf "\033[1;36;45mThe Current Node version: %s\n\n\033[0m" "$($nodeVer)"
 fi
 
 
 if [ "$nodePacktMngr" == 0 ]; then
     npm install -g npm
 else
-    printf "\033[1;30mThe Current Node Package Manager version: %s\n\n\033[0m" "$($nodePacktMngr)"
+    printf "\033[1;36;45mThe Current Node Package Manager version: %s\n\n\033[0m" "$($nodePacktMngr)"
 fi
 
 #Initialize the NODE.js
@@ -24,7 +24,7 @@ pckgJson="date -r package.json"
 if [ "$nowTime" = "$pckgJson" ]; then
     npm init -y
 else
-    printf "\033[1;32mpackage.json has been already created, no need to modify\n\n\033[0m"
+    printf "\033[1;36;45mpackage.json has been already created, no need to modify\n\n\033[0m"
 fi
 #Installing express
 expInstall="npm install -g express"
@@ -32,7 +32,7 @@ if [ "$expInstall" == 0 ]; then
     $expInstall
 else
     exprsVerShw="npm view express version"
-    printf "\033[1;30mThe Current Express App version: %s\n\n\033[0m" "$($exprsVerShw)"
+    printf "\033[1;36;45mThe Current Express App version: %s\n\n\033[0m" "$($exprsVerShw)"
 fi
 
 
@@ -42,7 +42,7 @@ if [ "$nodemon_install" == 0 ]; then
     $nodemon_install
 else
     nodeMonverShw="nodemon -v"
-    printf "\033[1;30mThe Current Nodemon version: %s\n\n\033[0m" "$($nodeMonverShw)"
+    printf "\033[1;36;45mThe Current Nodemon version: %s\n\n\033[0m" "$($nodeMonverShw)"
 fi
 
 
